@@ -30,7 +30,7 @@ Build a file-based key-value data store that supports the basic CRD (create, rea
 # Environment Setup
 Operating System    : WINDOWS 10\
 Programming Language: JAVA\
-IDE                 : ECLIPSE\
+IDE                 : ECLIPSE
 
 
 # Working Procedure
