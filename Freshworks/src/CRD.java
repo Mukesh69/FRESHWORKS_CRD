@@ -15,9 +15,9 @@ public class CRD {
         dir = new File(path);
         scan = new Scanner(System.in);
         if(!dir.mkdir()){                      
-            System.out.println("cannot create datastore");
+            System.out.println("CANNOT CREATE DATASTORE");
         }
-        else System.out.println("DataStore created at "+path);
+        else System.out.println("DATASTORE CREATED AT "+path);
     }
     
     //Create a new key value pair file
