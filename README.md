@@ -35,7 +35,7 @@ IDE                 : ECLIPSE
 
 # Working Procedure
 1. Run CRD.java
-2. The default file creation path is the C-Drive.
+2. The default file creation path is the C-Drive (C:/Data Store).
 3. Custom file path can be given.
 4. File name is the key provided.
 5. The data is stored as a JSON object inside the file.

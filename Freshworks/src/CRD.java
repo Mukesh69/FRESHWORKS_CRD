@@ -82,13 +82,13 @@ public class CRD {
 
         try {
             Files.deleteIfExists(Paths.get(path));
-            System.out.println("File with key " +key+" deleted successfully");
+            System.out.println("FILE WITH KEY " +key+" DELETED SUCCESSFULLY");
         } catch(NoSuchFileException e) {
-            System.out.println("No such file/directory exists");
+            System.out.println("NO SUCH FILE/DIRECTORY EXISTS");
         } catch(DirectoryNotEmptyException e) {
-            System.out.println("Directory is not empty.");
+            System.out.println("DIRECTORY IS NOT EMPTY");
         } catch(IOException e) {
-            System.out.println("Invalid permissions.");
+            System.out.println("INVALID PERMISSIONS");
         }
     }
     
@@ -109,24 +109,27 @@ public class CRD {
 	        CRD ds = new CRD(path);
 
 	        while(opt!=4){
-	            System.out.println("Select the option for \n1.Create \n2.Read \n3.Delete \n4.Quit");
+	            System.out.println("SELECT THE OPTION FOR \n1.CREATE \n2.READ \n3.DELETE \n4.QUIT");
 	            opt = scan.nextInt();
 	            switch (opt) {
 	                case 1:
 	                    ds.create(path);
 	                    break;
 	                case 2:
-	                    System.out.print("Enter the key to read : ");
+	                    System.out.print("ENTER THE KEY TO READ : ");
 	                    key = scan.next();
 	                    ds.read(path, key);
 	                    break;
 	                case 3:
-	                    System.out.print("Enter the key to delete file: ");
+	                    System.out.print("ENTER THE KEY TO DELETE FILE: ");
 	                    key = scan.next();
 	                    ds.delete(path, key);
 	                    break;
+	                case 4:
+	                	System.out.print("EXECUTION TERMINATED");
+	                	break;
 	                default:
-	                    System.out.print("Incorrect Option");
+	                    System.out.print("INCORRECT OPTION");
 	                    break;
 	            }
 	        }
