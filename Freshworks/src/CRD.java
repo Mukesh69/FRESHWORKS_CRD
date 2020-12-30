@@ -76,6 +76,22 @@ public class CRD {
         }
     }
     
+    //Delete file based on Key
+    public void delete(String dir_path, String key){
+        String path = dir_path + "/" + key + ".txt";
+
+        try {
+            Files.deleteIfExists(Paths.get(path));
+            System.out.println("File with key " +key+" deleted successfully");
+        } catch(NoSuchFileException e) {
+            System.out.println("No such file/directory exists");
+        } catch(DirectoryNotEmptyException e) {
+            System.out.println("Directory is not empty.");
+        } catch(IOException e) {
+            System.out.println("Invalid permissions.");
+        }
+    }
+    
     //Execution Function
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
