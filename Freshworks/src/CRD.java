@@ -55,6 +55,28 @@ public class CRD {
         }
     }
     
+    //Read file based on key
+    public void read(String dir_path, String key){
+        String path = dir_path+"/"+key+".txt";
+        String line = null;
+        FileReader file;
+        try{
+            file = new FileReader(path);
+            BufferedReader bufferedReader = new BufferedReader(file);
+            while((line = bufferedReader.readLine())!=null)
+                System.out.println(line);
+            bufferedReader.close();
+            file.close();
+        }catch(FileNotFoundException fe){
+            System.out.print("FILE WITH KEY" +key+" DOESN'T EXIST");
+            fe.printStackTrace();
+        }catch(IOException e){
+            System.out.print("ERROR READING FILE"+path);
+            e.printStackTrace();
+        }
+    }
+    
+    //Execution Function
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
 		 String def_path = "C:/Data Store";       
